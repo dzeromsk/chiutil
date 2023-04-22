@@ -38,7 +38,6 @@ func Logger(logger *zap.Logger) func(h http.Handler) http.Handler {
 					zap.String("method", r.Method),
 					zap.String("proto", r.Proto),
 					zap.String("remote_ip", remoteIP),
-					zap.String("duration_display", elapsed.String()),
 					zap.String("scheme", scheme),
 					zap.String("host", r.Host),
 					zap.String("path", r.RequestURI),
